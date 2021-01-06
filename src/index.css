@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.todo__form {
+  width: 168pt;
+  margin: 1pt;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo__item {
+  background-color: #bcbec3;
+  margin: 1pt;
+}
+
+.todo__grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #61dafb;
+}

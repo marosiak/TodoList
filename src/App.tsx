@@ -1,12 +1,14 @@
 import React from 'react';import './App.css';
-import TodoItem from "./todo/todo-item";
+import {TodoList} from "./todo/todo-list";
+import { TodoApp } from './TodoApp';
 
-function App() {
-  return (
-    <div className="App">
-      <TodoItem/>
-    </div>
-  );
-}
+
+const App = () => {
+    return (
+        <div className="App">
+            <TodoApp/>
+        </div>
+    );
+};
 
 export default App;
