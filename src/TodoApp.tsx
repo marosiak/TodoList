@@ -17,7 +17,7 @@ export const TodoApp = () => {
   return (
     <div className="todo__app">
       <TodoForm addTodo={addTodo}/>
-      <TodoList props={todoListProps}/>
+      <TodoList {...todoListProps}/>
     </div>
   )
 }

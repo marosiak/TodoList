@@ -6,7 +6,7 @@ export interface TodoListProps {
     todos: TodoItemData[]
 }
 
-export const TodoList = (props: TodoListProps) => {
+export const TodoList:React.FC<TodoListProps> = (props: TodoListProps) => {
     return (
         <div className="todo__list">
             <div className="todo__grid">
