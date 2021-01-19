@@ -1,16 +1,8 @@
-import React from 'react'
-import {useForm} from 'react-hook-form'
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { FormProps, TodoFormData } from './types';
 
-interface Props {
-    addTodo: (title: string, body: string) => void
-}
-
-type TodoFormData = {
-    title: string
-    body: string
-}
-
-export const TodoForm: React.FC<Props> = ({ addTodo }) => {
+const TodoForm: React.FC<FormProps> = ({ addTodo }) => {
     const {register, handleSubmit, errors} = useForm<TodoFormData>()
 
     const onSubmit = handleSubmit((data) => {
@@ -40,3 +32,5 @@ export const TodoForm: React.FC<Props> = ({ addTodo }) => {
         </div>
     );
 };
+
+export default TodoForm;

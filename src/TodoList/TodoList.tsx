@@ -1,17 +1,14 @@
 import React from 'react'
-import {TodoItem} from "./todo-item";
-import {TodoItemData} from "./todo-item"
+import TodoItem from "./TodoItem";
+import { TodoItemData, TodoListProps } from './types';
 
-export interface TodoListProps {
-    todos: TodoItemData[]
-}
-
-export const TodoList:React.FC<TodoListProps> = (props: TodoListProps) => {
+const TodoList:React.FC<TodoListProps> = (props) => {
+    const { todos = [] } = props
     return (
         <div className="todo__list">
             <div className="todo__grid">
                 {
-                    props.todos.map((item: TodoItemData, index: number) =>
+                    todos.map((item: TodoItemData, index: number) =>
                         <TodoItem
                             key={`todo__item-${index}`}
                             title={item.title}
@@ -23,3 +20,5 @@ export const TodoList:React.FC<TodoListProps> = (props: TodoListProps) => {
         </div>
     );
 };
+
+export default TodoList
